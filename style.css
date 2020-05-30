@@ -1,0 +1,79 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+:root{ /*Takhle si tvoris svoje varibles*/
+  --success-color: #28b663;
+  --error-color: #ee3622;
+}
+body {
+  background: #f0f1f3;
+  font-family: 'Raleway', sans-serif;
+  line-height: 1.8;
+  height: 100%;
+  display: flex;
+  justify-content: center; /*na stred horizontalne*/
+  align-items: center; /*na stred vertikalne, ale musis mit min-height!!*/
+  min-height: 100vh; /*muzes dat treba 50vh*/
+}
+.container {
+  background: #fff;
+  width: 400px;
+  padding: 20px;
+  color: #333;
+  border-radius: 5px;
+  box-shadow:2px 2px 15px rgb(173, 171, 171);
+}
+#form{
+  padding: 20px;
+}
+.form-wrap h1{
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
+}  
+.form-wrap .form-group label {
+  display: block;
+}
+.form-wrap .form-group input {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+}
+.form-wrap .form-group input:focus{
+  border-color: #777; /*pri kliknuti do okna barva okraje*/
+}
+.form-wrap .form-group.success input{
+  border-color: var(--success-color); /*pro JS */
+}
+.form-wrap .form-group.error input{
+  border-color: var(--error-color); /*pro JS*/
+}
+.form-wrap .form-group small{
+  color: var(--error-color);
+  visibility: hidden;
+  /*display: none;   je lepsi visibility zustane ti tam misto*/
+}
+.form-group.error small{ /*pokud ma form-group u sebe tu error class tak small je visible*/
+  visibility: visible;
+}
+.form-wrap button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  display: block;
+  background:#455ad3;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+.form-wrap button:hover {
+  background: #566be4; 
+}
+
+
